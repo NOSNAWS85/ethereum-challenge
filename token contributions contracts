@@ -1,0 +1,46 @@
+//SPDX-LICENSE-IDENTIFIER: MIT
+pragma solidity >=0.5.0 <0.9.0;
+import "openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol";
+import "OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol";    
+
+contract Token is ERC20 {
+    
+    constructor  () {
+       
+        owner= payable(msg.sender);
+        
+      TokenTransferStartTime (); {
+        block.timestamp now; // Time when donations from contributions contract starts
+    }
+    
+     TokenTransferEndTime(); {
+     block.timestamp + 604800; // Donations contributions time set to one week
+    }
+    }
+     
+    // transfer tokens from "Tokens" contract to "contributions"
+    
+    function tokenTransfer () public payable {
+        (bool success , ) = owner.call{value : msg . value} ( " ");
+        
+        require (success, "Failed to send money");
+        require (donation payment)
+
+    }
+
+}
+Contract contributions {
+    uint totalDonations;
+    address payable owner;
+    fallback() external payable {}
+    receive() external payable {}  //use for donations
+    sendEther(uint 256)  external payable  // send tokens from "Token" contract to all donors
+    function getAllEthContributions () public view {returns _paymentAmount } 
+     
+      mapping (address => uint256) balanceOf; //donor addresses and balances
+
+    event receivedDonations(address sender);
+     function startEvents() public {emit receivedDonations}
+     emit tokenTransferTime ()
+}
